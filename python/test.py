@@ -1,13 +1,7 @@
-a = int(input())
-for b in range(a):
-    speed, dist = list(map(float,input().split(':')))
-    if speed == 0:
-        print("SAFE")
-    else:
-        time = dist/speed
-        if time <= 1:
-            print("SWERVE")
-        elif time <= 5:
-            print("BRAKE")
-        else:
-            print("SAFE")
+def fibbonacci(n):
+    dp = [0]*n
+    dp[1] = 1
+    for i in range(2,n):
+        dp[i] = dp[i-1]+dp[i-2]
+    return dp[-1]
+print(fibbonacci(40))
