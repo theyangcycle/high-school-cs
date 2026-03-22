@@ -2,21 +2,16 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-#include <sstream>
 using namespace std;
 
 int main()
 {
     int n;cin>>n;
-    cin.ignore();
     
-    string _;getline(cin,_);
-    stringstream ss(_);
-    vector<int>nums;
-    string num;
-    while (ss >> num)
-    {        
-        nums.push_back(stoi(num));
+    vector<int>nums(n);
+    for (int _;_<n;_++)
+    {
+        cin>>nums[_];
     }
     vector<int> counts = {1};
     int id = 0;
