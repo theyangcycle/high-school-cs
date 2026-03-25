@@ -30,6 +30,7 @@ def decode(abc,ABC):
 def encode(abc,ABC):
     string = input("Enter text you want to encode: ")
     shift = int(input("Enter a positive integer for the shift: "))
+    print()
     output = []
     for i in string:
         if i.isalpha() == False:
