@@ -44,7 +44,7 @@ def encode(abc,ABC):
                 output.append(abc[x])
         else:
             x = ABC.index(i) + shift
-            if 0 > x:
+            if x > 25:
                 output.append(ABC[x-26])
             else:
                 output.append(ABC[x])
