@@ -8,31 +8,22 @@ for i in range(n):
     xvals.append(x)
     yvals.append(y)
     cows.append([x,y])
-xvals,yvals = sorted(xvals),sorted(yvals)
-for i in range(len(xvals)-2):
-    a = xvals[i]+1
-    for j in range(len(yvals)-2):
-        b = yvals[j]+1
-        temp = []
-        count = 1
-        for k in range(len(cows)):
-            if cows[k][0]<a and cows[k][1]<b:
-                count += 1
-        temp.append(count)
-        count = 0
-        for k in range(len(cows)):
-            if cows[k][0]<a and cows[k][1]>b:
-                count += 1
-        temp.append(count)
-        count = 0
-        for k in range(len(cows)):
-            if cows[k][0]>a and cows[k][1]<b:
-                count += 1
-        temp.append(count)
-        count = 0
-        for k in range(len(cows)):
-            if cows[k][0]>a and cows[k][1]>b:
-                count += 1
-        temp.append(count)
-        m.append(max(temp))
+xvals,yvals = set(sorted(xvals)),set(sorted(yvals))
+for a in xvals:
+    a += 1
+    for b in yvals:
+        b += 1
+        bl = br = tl = tr = 0
+        for j in cows:
+            if j[0]<a:
+                if j[1] < b:
+                    bl += 1
+                else:
+                    tl += 1
+            elif j[0]>a:
+                if j[1] < b:
+                    br += 1
+                else:
+                    tr += 1
+        m.append(max(bl,br,tl,tr))
 print(min(m))
