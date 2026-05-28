@@ -7,7 +7,7 @@ cap1,amo1 = list(map(int,input().split()))
 cap2,amo2 = list(map(int,input().split()))
 cap3,amo3 = list(map(int,input().split()))
 
-start = time.perf_counter()
+
 
 for i in range(33):
     if amo1 + amo2 < cap2:
