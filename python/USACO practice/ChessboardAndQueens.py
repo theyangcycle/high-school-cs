@@ -5,14 +5,14 @@ for _ in range(8):
 count = 0
 def queens(coords,numq):
     global count
-    global board
+    localboard = board
     if numq == 8:
         count += 1
         return
     for i in range(8):
         boo = True
         y = [j[1] for j in coords]
-        if board[numq][i] == "*":
+        if localboard[numq][i] == "*":
             continue
         if i in y:
             continue
