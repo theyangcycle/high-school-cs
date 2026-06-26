@@ -8,21 +8,21 @@ for i in range(n):
     q = list(map(int,input().split()))
     if n <= 250000:
         if q[0] == 0:
-            a[q[1]] = q[2]
+            a[q[1]*2] = q[2]
         else:
-            print(a[q[1]])
+            print(a[q[1]*2])
     elif n <= 500000:
         if q[0] == 0:
-            b[q[1]] = q[2]
+            b[q[1]*2] = q[2]
         else:
-            print(b[q[1]])
+            print(b[q[1]*2])
     elif n <= 750000:
         if q[0] == 0:
-            c[q[1]] = q[2]
+            c[q[1]*2] = q[2]
         else:
-            print(c[q[1]])
+            print(c[q[1]*2])
     else:
         if q[0] == 0:
-            d[q[1]] = q[2]
+            d[q[1]*2] = q[2]
         else:
-            print(d[q[1]])
+            print(d[q[1]*2])
